@@ -21,21 +21,22 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<bean id="mailMail" class="com.batchRun.util.MailMail">
 		<property name="mailSender" ref="mailSender" />
 		<property name="simpleMailMessage" ref="customeMailMessage" />
+		<property name="velocityEngine" ref="velocityEngine" />
 	</bean>
-	
+
 	<bean id="customeMailMessage"
 		class="org.springframework.mail.SimpleMailMessage">
 
-		<property name="from" value="email id " />
-		<property name="subject" value="Testing" />
-		<property name="text">
-		<value>
-			<![CDATA[
-	Dear %s,
-			%s
-			]]>
-		</value>
-	</property>
+		<property name="from" value="rakeshpati914@gmail.com" />
+		<property name="subject" value="Email Test" />
 	</bean>
-
+	<bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+			</value>
+		</property>
+	</bean>
 </beans>
