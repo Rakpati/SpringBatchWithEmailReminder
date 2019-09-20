@@ -45,7 +45,7 @@ public class MailMail
                 message.setSubject(simpleMailMessage.getSubject());
                 Map<String, Object> model = new HashMap();
                 model.put("user", name.last());
-                if(days.last() == 20) {
+                if(days.last() == 21) {
                 	text = VelocityEngineUtils.mergeTemplateIntoString(
                 			velocityEngine, "finalReminderTemplate.vm", model);
                 }else {
