@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<spring.version>4.0.5.RELEASE</spring.version>
-		<spring.batch.version>3.0.4.RELEASE</spring.batch.version>
+		<spring.batch.version>4.0.0.RELEASE</spring.batch.version>
 		<spring.jdbc.version>4.0.5.RELEASE</spring.jdbc.version>
 		<hsql.version>1.8.0.7</hsql.version>
 		<commons.version>1.4</commons.version>
